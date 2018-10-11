@@ -11,8 +11,10 @@
   display: block;
   background: blue;
   border-radius: 50%;
-  width: 5vw;
-  height: 5vw;
+  /* width: 5vw;
+  height: 5vw; */
+  width: 70px;
+  height: 70px;
   position: fixed;
   bottom: 50px;
   left: 50%;
@@ -62,8 +64,10 @@
   display: block;
   background: #f00;
   border-radius: 50%;
-  width: 5vw;
-  height: 5vw;
+  /* width: 5vw;
+  height: 5vw; */
+  width: 70px;
+  height: 70px;
   position: fixed;
   bottom: 50px;
   left: 50%;
@@ -86,8 +90,10 @@
 
 .nav-content {
   border-radius: 50%;
-  width: 5vw;
-  height: 5vw;
+  /* width: 5vw;
+  height: 5vw; */
+  width: 70px;
+  height: 70px;
   position: fixed;
   bottom: 50px;
   left: 50%;
@@ -104,9 +110,9 @@
 
 .nav-content-expand {
   width: 100vw !important;
-  height: calc(100vh - 8vw) !important;
+  height: calc(100vh - 100px) !important;
   left: 0 !important;
-  bottom: calc(5vw + 50px) !important;
+  bottom: 100px !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   margin-left: 0 !important;
