@@ -6,25 +6,26 @@
 .opacity-1 {
   opacity: 1 !important;
 }
-.hamburguer-button {
-  border: none;
-  display: block;
-  background: blue;
+.circle-fixed {
   border-radius: 50%;
-  /* width: 5vw;
-  height: 5vw; */
   width: 70px;
   height: 70px;
   position: fixed;
   bottom: 50px;
   left: 50%;
-  margin-left: -2.5vw;
+  margin-left: -35px;
+}
+/* hambuguer btn */
+.hamburguer-button {
+  border: none;
+  display: block;
+  background: rgb(74, 71, 255);
   transition: all 5s;
   z-index: 100;
   cursor: pointer;
 }
-.hamburguer-button:focus,
-.hamburguer-button:active {
+
+.hamburguer-button:focus,.hamburguer-button:active {
   outline: none;
 }
 .hamburguer-button span {
@@ -59,25 +60,15 @@
   transform: rotate(-45deg);
   top: 50%;
 }
-
+/* background nav */
 .label-nav {
   display: block;
-  background: #f00;
-  border-radius: 50%;
-  /* width: 5vw;
-  height: 5vw; */
-  width: 70px;
-  height: 70px;
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  margin-left: -2.5vw;
+  background:tomato;
   transition: all 0.9s;
   z-index: 4;
   margin-bottom: 0;
   overflow: hidden;
 }
-
 .label-expand {
   width: 200vw !important;
   height: 200vw !important;
@@ -88,26 +79,17 @@
   margin-left: 0 !important;
 }
 
+/* background nav */
 .nav-content {
-  border-radius: 50%;
-  /* width: 5vw;
-  height: 5vw; */
-  width: 70px;
-  height: 70px;
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  margin-left: -2.5vw;
-  background: green;
+  background: transparent;
   transition: all 1s;
-
   z-index: 20;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 5vh;
 }
-
 .nav-content-expand {
   width: 100vw !important;
   height: calc(100vh - 100px) !important;
@@ -117,10 +99,10 @@
   margin-bottom: 0 !important;
   margin-left: 0 !important;
   border-radius: 0 !important;
-  padding-bottom: 200px;
 }
 .nav-content ul li {
   list-style: none;
+  text-align: center;
 }
 .nav-content ul li a {
   color: #fff;
@@ -129,8 +111,10 @@
   transition: opacity 0.2s ease-in-out;
 }
 .linear-nav-content {
+  margin-top: 10vh;
+  padding-bottom: 2vh;
   width: 80%;
-  border: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 @media (max-width: 769px) {
