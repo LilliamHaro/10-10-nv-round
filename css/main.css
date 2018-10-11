@@ -3,17 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+.opacity-1 {
+  opacity: 1 !important;
+}
 .hamburguer-button {
   border: none;
   display: block;
   background: blue;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 5vw;
   position: fixed;
   bottom: 50px;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -2.5vw;
   transition: all 5s;
   z-index: 100;
   cursor: pointer;
@@ -22,17 +25,49 @@
 .hamburguer-button:active {
   outline: none;
 }
+.hamburguer-button span {
+  width: 40%;
+  margin: 0 auto;
+  height: 3px;
+  border-radius: 20px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all 0.2s;
+}
+.sp-1 {
+  top: 40%;
+}
+.sp-2 {
+  top: 50%;
+}
+.sp-3 {
+  top: 60%;
+}
+.sp-cross-1 {
+  transform: rotate(45deg);
+  top: 50%;
+}
+.sp-cross-2 {
+  left: -10% !important;
+  opacity: 0;
+}
+.sp-cross-3 {
+  transform: rotate(-45deg);
+  top: 50%;
+}
 
 .label-nav {
   display: block;
   background: #f00;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 5vw;
   position: fixed;
   bottom: 50px;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -2.5vw;
   transition: all 0.9s;
   z-index: 4;
   margin-bottom: 0;
@@ -40,57 +75,74 @@
 }
 
 .label-expand {
-  width: 200vw;
-  height: 400vh;
-  left: -50%;
-  bottom: -200vh;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200vw !important;
+  height: 200vw !important;
+  left: -50vw !important;
+  bottom: -50vw !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
 }
 
 .nav-content {
-  height: 100vh;
-  width: 102vw;
-  margin-top: -50vh;
+  border-radius: 50%;
+  width: 5vw;
+  height: 5vw;
   position: fixed;
-  z-index: 90;
-  display: none;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -2.5vw;
   background: green;
-}
-.nav-content ul li {
-   text-align:center;
-}
-@media (max-width: 769px) {
-  .label-expand {
-    width: 400vw;
-    left: -150vw;
-  }
-  .label-nav {
-    transition: all 0.8s;
-  }
+  transition: all 1s;
+
+  z-index: 20;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 600px) {
+.nav-content-expand {
+  width: 100vw !important;
+  height: calc(100vh - 8vw) !important;
+  left: 0 !important;
+  bottom: calc(5vw + 50px) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  border-radius: 0 !important;
+  padding-bottom: 200px;
+}
+.nav-content ul li {
+  list-style: none;
+}
+.nav-content ul li a {
+  color: #fff;
+  font-size: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.linear-nav-content {
+  width: 80%;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 769px) {
+  .label-nav,
   .hamburguer-button,
-  .label-nav {
+  .nav-content {
     margin-left: -25px;
     width: 50px;
     height: 50px;
-    transition: all 0.5s;
   }
-
   .label-expand {
-    width: 400vw;
-    height: 250vh;
-    left: -150vw;
-    bottom: -120vh;
+    height: 200vh !important;
+    width: 200vh !important;
+    left: -65vh !important;
+    bottom: -50vh !important;
+    margin-left: 0 !important;
   }
-  .nav-content {
-    margin-left: 7vw;
-    margin-top: -45vh;
+  .label-nav {
+    transition: all 0.5s;
   }
 }
